@@ -15,49 +15,51 @@ class MainFoodPage extends StatefulWidget {
 class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // backgroundColor: AppColors.buttonBackgroundColor,
-      body: Container(
-        child: Column(
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 45, bottom: 15),
-              padding: EdgeInsets.only(left: 10, right: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    children: [
-                      BigText(
-                        text: "Rajasthan",
-                        color: AppColors.mainColor,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SmallText(text: "Jaipur"),
-                          Icon(Icons.arrow_drop_down_rounded)
-                        ],
-                      )
-                    ],
-                  ),
-                  Container(
-                    alignment: Alignment.center,
-                    height: 45,
-                    width: 45,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: AppColors.mainColor),
-                    child: Icon(
-                      Icons.search,
-                      color: Colors.white,
+    return SafeArea(
+      child: Scaffold(
+        // backgroundColor: AppColors.buttonBackgroundColor,
+        body: Container(
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 10, bottom: 15),
+                padding: EdgeInsets.only(left: 10, right: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      children: [
+                        BigText(
+                          text: "Rajasthan",
+                          color: AppColors.mainColor,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SmallText(text: "Jaipur"),
+                            Icon(Icons.arrow_drop_down_rounded)
+                          ],
+                        )
+                      ],
                     ),
-                  )
-                ],
+                    Container(
+                      alignment: Alignment.center,
+                      height: 45,
+                      width: 45,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: AppColors.mainColor),
+                      child: Icon(
+                        Icons.search,
+                        color: Colors.white,
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-            FoodPageBody(),
-          ],
+              FoodPageBody(),
+            ],
+          ),
         ),
       ),
     );
