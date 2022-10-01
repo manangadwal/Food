@@ -1,0 +1,10 @@
+^C:\USERS\MANAN\DESKTOP\FOOD\BUILD\WINDOWS\CMAKEFILES\73DE14C8BCE83FAC7F47770141E810ED\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
